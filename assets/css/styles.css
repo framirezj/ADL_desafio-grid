@@ -2,12 +2,34 @@ body{
     min-height: 100vh;
 }
 
+/* google fonts */
+.roboto-light {
+    font-family: "Roboto", serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .roboto-regular {
+    font-family: "Roboto", serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .roboto-bold {
+    font-family: "Roboto", serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+
 /* grid areas */
 
 header{
     grid-area: h;
     background-color: blueviolet;
     height: 4rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 main, aside{
@@ -22,12 +44,53 @@ main{
 aside{
     grid-area: a;
     background-color: whitesmoke;
+    border-right: solid 1px grey;
 }
+
+aside, .categorias{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: left;
+}
+
+/* categorias */
+.categorias{
+    padding: 1rem;
+}
+
+.categorias h2{
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.categorias ul{
+    list-style-type: none;
+    padding: 0;
+}
+
+.categorias ul li{
+    margin-bottom: 0.5rem;
+}
+
+.categorias ul li a{
+    font-weight: 500;
+    color: rgb(51, 51, 51);
+    text-decoration: none;
+}
+
+.categorias span{
+    color: grey;
+}
+
 
 footer{
     grid-area: f;
     background-color: lightgray;
     height: 8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* grid layout template areas */
@@ -35,7 +98,11 @@ footer{
 .grid-container{
     display: grid;
     grid-template-areas:
-        "h h h h h h"
-        "a m m m m m"
-        "f f f f f f";
+        "h h h h h h h h h h"
+        "a m m m m m m m m m"
+        "f f f f f f f f f f";
+}
+
+h1{
+    color: whitesmoke;
 }
