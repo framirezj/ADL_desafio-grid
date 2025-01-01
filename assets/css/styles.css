@@ -33,12 +33,12 @@ header{
 }
 
 main, aside{
-    height: 50rem;
+    padding: 1rem;
 }
 
 main{
     grid-area: m;
-    background-color: whitesmoke;
+    background-color: rgb(236, 234, 234);
 }
 
 aside{
@@ -55,9 +55,6 @@ aside, .categorias{
 }
 
 /* categorias */
-.categorias{
-    padding: 1rem;
-}
 
 .categorias h2{
     margin-top: 0.5rem;
@@ -83,6 +80,45 @@ aside, .categorias{
     color: grey;
 }
 
+/* productos */
+main{
+}
+
+.productos{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    justify-content: space-evenly;
+    gap: 1rem;
+}
+
+.card{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border: solid 1px black;
+    width: 28rem;
+    background-color: white;
+}
+
+.card img{
+    width: 100%;
+    height: auto;
+}
+
+.card p{
+    margin-top: 0;
+}
+
+.card button{
+    all: unset;
+    width: 100%;
+    background-color: blueviolet;
+    text-align: center;
+    color: whitesmoke;
+    padding: 0.5rem 0 0.5rem 0 ;
+}
 
 footer{
     grid-area: f;
@@ -102,6 +138,7 @@ footer{
         "a m m m"
         "f f f f";
     grid-template-columns: 1fr 2fr 2fr 2fr;
+    grid-template-rows: auto auto auto auto;
 }
 
 h1{
